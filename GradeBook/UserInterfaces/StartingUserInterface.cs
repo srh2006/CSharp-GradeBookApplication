@@ -43,13 +43,13 @@ namespace GradeBook.UserInterfaces
 
             if (string.Equals(type, Enums.GradeBookType.Standard.ToString(), StringComparison.CurrentCultureIgnoreCase))
             {
-                BaseGradeBook gradeBook = new StandardGradeBook(name);
+                StandardGradeBook gradeBook = new StandardGradeBook(name);
                 Console.WriteLine("Created gradebook {0}.", name);
                 GradeBookUserInterface.CommandLoop(gradeBook);
             }
             else if (string.Equals(type, Enums.GradeBookType.Ranked.ToString(), StringComparison.CurrentCultureIgnoreCase))
             { 
-                BaseGradeBook gradeBook = new RankedGradeBook(name);
+                RankedGradeBook gradeBook = new RankedGradeBook(name);
                 Console.WriteLine("Created gradebook {0}.", name);
                 GradeBookUserInterface.CommandLoop(gradeBook);
             }
